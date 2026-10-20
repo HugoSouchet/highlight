@@ -1,0 +1,1 @@
+__d(function(g,r,i,a,m,e,d){"use strict";Object.defineProperty(e,'__esModule',{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return s}});var n=r(d[0]),t=r(d[1]),o=r(d[2]),u=r(d[3]);function s(){const{teamId:s}=(0,o.useSession)();return s?(0,u.jsx)(n.TeamPageScreen,{teamId:s}):(0,u.jsx)(t.SoonScreen,{kind:"photos"})}},757,[822,811,798,6]);

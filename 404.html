@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Highlight</title>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
@@ -23,13 +23,53 @@
         flex: 1;
       }
     </style>
-  <link rel="icon" href="/highlight/favicon.ico"/></head>
+  <!-- pwa -->
+    <meta name="description" content="L’appli du club de basket : agenda, présences, covoiturage, photos (démo)." />
+    <meta name="theme-color" content="#F2F2F0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0E0E0D" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Highlight" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="/highlight/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/highlight/pwa/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/highlight/pwa/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/highlight/pwa/apple-touch-icon-180.png" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1170x2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1206x2622.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1284x2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1290x2796.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-1320x2868.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/highlight/pwa/startup-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <style id="pwa">
+      html, body { background: #F2F2F0; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+      @media (prefers-color-scheme: dark) { html, body { background: #0E0E0D; } }
+      body { -webkit-text-size-adjust: 100%; }
+    </style>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          var hadController = !!navigator.serviceWorker.controller;
+          navigator.serviceWorker.register('/highlight/sw.js', { scope: '/highlight/' }).catch(function () {});
+          // Nouvelle version installée : on recharge une fois pour la prendre.
+          navigator.serviceWorker.addEventListener('controllerchange', function () {
+            if (hadController && !window.__hlReloaded) { window.__hlReloaded = true; window.location.reload(); }
+          });
+        });
+      }
+    </script>
+  <!-- /pwa --></head>
 
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/highlight/_expo/static/js/web/__expo-metro-runtime-97703ae02682710149335928b974f18d.js" defer></script><script src="/highlight/_expo/static/js/web/__common-765090e535ee69c0b66e91d41f54b700.js" defer></script><script src="/highlight/_expo/static/js/web/entry-7b6b689f0de62e6e6d1c006d508160eb.js" defer></script>
+  <script src="/highlight/_expo/static/js/web/__expo-metro-runtime-97703ae02682710149335928b974f18d.js" defer></script><script src="/highlight/_expo/static/js/web/__common-b40f58fea065212db3d6165d0ef58db5.js" defer></script><script src="/highlight/_expo/static/js/web/entry-645b737970ae05475f1f77c54980d9cc.js" defer></script>
 </body>
 </html>

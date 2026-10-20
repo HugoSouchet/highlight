@@ -1,0 +1,38 @@
+{
+  "id": "/highlight/",
+  "name": "Highlight",
+  "short_name": "Highlight",
+  "description": "L’appli du club de basket : agenda, présences, covoiturage, photos (démo).",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "/highlight/",
+  "scope": "/highlight/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F2F0",
+  "theme_color": "#F2F2F0",
+  "categories": [
+    "sports",
+    "social"
+  ],
+  "icons": [
+    {
+      "src": "/highlight/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/highlight/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/highlight/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

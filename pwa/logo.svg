@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Highlight : carré noir arrondi, « H » condensé blanc, ballon orange. -->
+  <rect width="512" height="512" rx="114" fill="#111111"/>
+  <g id="mark" transform="translate(-26 10)">
+    <rect x="150" y="112" width="66" height="296" rx="8" fill="#FFFFFF"/>
+    <rect x="270" y="112" width="66" height="296" rx="8" fill="#FFFFFF"/>
+    <rect x="150" y="238" width="186" height="54" fill="#FFFFFF"/>
+    <circle cx="378" cy="150" r="50" fill="#E2470E" stroke="#111111" stroke-width="10"/>
+    <path d="M378 100 C 404 124, 404 176, 378 200" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+    <path d="M328 150 L 428 150" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>
